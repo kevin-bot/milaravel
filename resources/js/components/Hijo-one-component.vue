@@ -3,11 +3,11 @@
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card">
-                    <div class="card-header">Ejemplo de componente</div>
+                    <div class="card-header">Componente Hijo Uno</div>
 
                     <div class="card-body">
                         <input type="text" v-model="nombre" placeholder="Escriba su nombre">
-                        <h2 class="mt-3">Hola:{{nombre}}</h2>
+                        <button class="btn btn-success" @click='enviarNombre'>Enviar</button>
                     </div>
                 </div>
             </div>
@@ -21,6 +21,11 @@
             return {
                 nombre : ''
             }
-        }        
+        },
+        methods:{
+            enviarNombre(){
+                this.$emit('nombre',this.nombre);
+            }
+        }       
     }
 </script>
