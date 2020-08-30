@@ -24,7 +24,7 @@
         },
         methods:{
             enviarNombre(){
-                this.$emit('nombre',this.nombre);
+                this.$emit('mi_eventoNombre',this.nombre);
             }
         }       
     }

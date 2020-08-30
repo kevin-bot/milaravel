@@ -1933,7 +1933,7 @@ __webpack_require__.r(__webpack_exports__);
   },
   methods: {
     enviarNombre: function enviarNombre() {
-      this.$emit('nombre', this.nombre);
+      this.$emit('mi_eventoNombre', this.nombre);
     }
   }
 });
@@ -1965,7 +1965,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 /* harmony default export */ __webpack_exports__["default"] = ({
-  props: ['nombre'],
+  props: ['mynombre'],
   data: function data() {
     return {};
   }
@@ -1996,8 +1996,8 @@ __webpack_require__.r(__webpack_exports__);
     };
   },
   methods: {
-    enviarNombre: function enviarNombre(nombre) {
-      this.nombre = nombre;
+    SetNombre: function SetNombre(elParametroDeMiHijo) {
+      this.nombre = elParametroDeMiHijo;
     }
   }
 });
@@ -37662,7 +37662,7 @@ var render = function() {
           _vm._v(" "),
           _c("div", { staticClass: "card-body" }, [
             _c("h2", { staticClass: "mt-3" }, [
-              _vm._v("Hola:" + _vm._s(_vm.nombre))
+              _vm._v("Hola:" + _vm._s(_vm.mynombre))
             ])
           ])
         ])
@@ -37695,9 +37695,9 @@ var render = function() {
   return _c(
     "div",
     [
-      _c("hijoOne-component", { on: { nombre: _vm.enviarNombre } }),
+      _c("hijoOne-component", { on: { mi_eventoNombre: _vm.SetNombre } }),
       _vm._v(" "),
-      _c("hijoTwo-component", { attrs: { nombre: _vm.nombre } })
+      _c("hijoTwo-component", { attrs: { mynombre: _vm.nombre } })
     ],
     1
   )

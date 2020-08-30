@@ -5,7 +5,7 @@
                 <div class="card">
                     <div class="card-header">Componente Hijo dos</div>
                     <div class="card-body">                        
-                        <h2 class="mt-3">Hola:{{nombre}}</h2>
+                        <h2 class="mt-3">Hola:{{mynombre}}</h2>
                     </div>
                 </div>
             </div>
@@ -15,7 +15,7 @@
 
 <script >
     export default {
-        props:['nombre'],
+        props:['mynombre'],
         data(){
             return {
                 

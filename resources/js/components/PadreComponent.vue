@@ -1,7 +1,7 @@
 <template>
     <div>
-        <hijoOne-component @nombre='enviarNombre'></hijoOne-component>
-        <hijoTwo-component :nombre='nombre'></hijoTwo-component>        
+        <hijoOne-component @mi_eventoNombre='SetNombre'></hijoOne-component>
+        <hijoTwo-component :mynombre='nombre'></hijoTwo-component>        
     </div>
 </template>
 
@@ -13,8 +13,8 @@
             }
         },
         methods:{
-            enviarNombre(nombre){
-                this.nombre = nombre;
+            SetNombre(elParametroDeMiHijo){
+                this.nombre = elParametroDeMiHijo;
             }
         }      
     }
